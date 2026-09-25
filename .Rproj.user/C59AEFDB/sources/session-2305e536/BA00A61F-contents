@@ -1,0 +1,102 @@
+## Drill Homework 04 #################################
+# Manipulating Time Series and Frequency Data to get tidy data
+# Eleanor Suttle
+
+## Package Handling ##################################
+pacman::p_load(datasets,lubridate,pacman,tidyverse,tsibble)
+
+## AirPassengers Dataset #############################
+# 1) Access the built-in dataset “AirPassengers”, save it as `dfAP`, and print it to the console.
+
+dfAP <- AirPassengers %>% as_tsibble() %>% print()
+
+# 2) Use what we learned about this type of dataset to make it tidy and properly formatted.
+#Create appropriate columns for the individual date components.
+#Make sure every column has a name that properly describes what it represents.
+
+dfAP <- AirPassengers %>% as_tsibble() %>%
+  select(date=index,passengers=value) %>% print()
+
+dfAP <- dfAP %>% mutate(year = year(date),
+                      month = month(date)) %>%
+  select(date,year,month,passengers) %>% print()
+
+# 3) Analyze and Graph the AirPassengers Data
+#Create a new data frame that depicts the average number of passengers per year
+
+dfAP %>% as_tibble() %>% summarize(
+  sum_value = sum(passengers),
+  mean_value = mean(passengers),
+  median_value = median(passengers),
+  sd_value = sd(passengers),
+  min_value = min(passengers),
+  max_value = max(passengers),
+  total_count = n()
+) %>% print()
+
+dfAPMean <- dfAP %>% index_by(year) %>%
+  summarize(mean_passengers = mean(passengers)) %>% print()
+
+# 4) Use ggplot() and an appropriate plot type to graph this information to see if there is a pattern in the data. 
+# Include a smoothing line, but do not specify a method type.
+# Don't forget titles, labels, and proper scaling
+
+dfAPMean %>% ggplot(aes(x=mean_passengers,y=year)) +
+  geom_point(height=0.2,width=0.2) +
+  ylab("Year") +
+  xlab("Average Air Passengers") +
+  ggtitle("Average Air Passengers per Year") +
+  scale_y_continuous(limits = c(1949, 1960), breaks = seq(1949, 1960, by = 1)) +
+  scale_x_continuous(limits = c(120, 480), breaks = seq(120, 480, by = 40)) +
+  geom_smooth(se = FALSE) 
+
+##geom_point()## Titanic dataset ##############################################
+# 5) Access the built-in dataset “Titanic”, save it as `dfT`, and print it to the console.
+
+dfT <- Titanic %>% as_tibble() %>% print()
+
+# 6) Use what we learned about this type of dataset to make it tidy and properly formatted.
+
+dfT <- dfT %>% uncount(n) %>% print()
+
+# 7) Have your code output the total number of people on the Titanic
+
+nrow(dfT)
+dfT %>% count(name = "total_people") %>% print()
+
+# 8) Count the number of people that survived. 
+#Hint: You can count the data after filtering to only those that survived.
+
+dfT %>% filter(Survived == "Yes") %>% count() %>% print()
+
+# 9) Group the passengers by class and find their counts. Store this as a new dataframe.
+
+dfTClass <- dfT %>% count(Class) %>% print()
+
+# 10) Group and count by class the number of passengers that survived. Store this as a new dataframe.
+
+dfSurvived <- dfT %>% filter(Survived == "Yes") %>% count(Class) %>% print()
+
+# 11) Create a new combined data frame that takes the df from #9 and adds the specific column from #10
+# HINT:  How do you reference a specific column out of a dataframe?
+
+dfCombined <- dfTClass %>% mutate(survived = dfSurvived$n) %>% print()
+
+# 12) In our new combined data frame, add a new calculated column for the proportion of those that survived by class.
+
+dfCombined <- dfCombined %>% mutate(proportion_survived = survived / n) %>% print()
+
+# 13) Use ggplot to create a bar graph with class on the x-axis and proportion survived on the y-axis.
+# HINT: We are specifying a specific y axis in a bar chart, so we have to do something inside geom_bar()
+
+ggplot(dfCombined, (aes(x = Class, y = proportion_survived))) + geom_bar(stat = "identity")
+
+## CLEANUP ###########################################
+#Clear Environment
+rm(list=ls())
+#Unload Packages
+p_unload(all)
+#Clear Graphics
+graphics.off()
+#Clear Console
+cat("\014")

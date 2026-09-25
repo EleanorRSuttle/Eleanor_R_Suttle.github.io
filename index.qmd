@@ -1,0 +1,18 @@
+---
+title: "Eleanor Portfolio"
+image: C:/Users/Eleanor Suttle/Desktop/Local Documents/Eleanor Portfolio/b37dd8fc-249b-4b96-b475-785b59a8defc.jpg
+about:
+  template: jolla
+  links: 
+    - icon: github
+      text: GitHub
+      href: https://github.com/[EleanorRSuttle]
+    - icon: linkedin
+      text: LinkedIn
+      href: https://linkedin.com/in/[Eleanor Suttle]
+    - icon: inboxes
+      text: Contact
+      href: mailto:[esuttle@uark.edu]
+page-layout: full
+title-block-banner: true
+---
