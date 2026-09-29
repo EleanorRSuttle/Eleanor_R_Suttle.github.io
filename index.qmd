@@ -1,6 +1,6 @@
 ---
-title: "Eleanor Portfolio"
-image: C:/Users/Eleanor Suttle/Desktop/Local Documents/Eleanor Portfolio/b37dd8fc-249b-4b96-b475-785b59a8defc.jpg
+title: "Eleanor Suttle"
+image: profile.jpg
 about:
   template: jolla
   links: 

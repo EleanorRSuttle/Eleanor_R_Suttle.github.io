@@ -2,6 +2,6 @@
 title: "Resume"
 ---
 
-\<iframe width="800" height="1000"\
-src="Eleanor.Suttle.Engineering.Resume.(1).pdf"\>\
-\</iframe\>
+<iframe width="100%" height="800"
+src="EleanorSuttleResume.pdf">
+</iframe>
