@@ -16,3 +16,4 @@ about:
 page-layout: full
 title-block-banner: true
 ---
+I am an Industrial Engineering and Operations Analytics student at the University of Arkansas who is interested in exploring and pursuing possible job opportunities in supply chain managment. I enjoy using programs like Excel and R Studio to problem solve, and I am currently tutoring 4 different students in Algebra and Pre-Calculus.
