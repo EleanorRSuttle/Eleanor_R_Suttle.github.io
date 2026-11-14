@@ -1,8 +1,18 @@
 ---
 title: "Data Visualization - The California Housing Market"
-date: “2026-11-13”
-image: ![Cover image](image.png)
-TeamMembers: [Caleb Duncan](https://caleb-duncan0719.github.io/) - [Eleanor Suttle](https://eleanorrsuttle.github.io/) - [Anthony White](https://awhite-thunder.github.io) - [Melany Chavez](https://) - [Lifted David](https://ldavid1.github.io/)
+date: "2026-11-13"
+image: image.png
+author: 
+  - name: Caleb Duncan
+    url: (https://caleb-duncan0719.github.io/)     
+  - name: Eleanor Suttle
+    url: (https://eleanorrsuttle.github.io/) 
+  - name: Anthony White
+    url: (https://awhite-thunder.github.io) 
+  - name: Lifted David
+    url: (https://ldavid1.github.io/)
+  - name: Melany Chavez
+    url:
 lightbox: true
 format: html
 ---

@@ -7,11 +7,11 @@
     "text": "This is the first post in a Quarto blog. Welcome!\n\nSince this post doesn’t specify an explicit image, the first image in the post will be used in the listing page of posts."
   },
   {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "Eleanor Suttle",
+    "objectID": "posts/data-visualization/DataVisualization.html",
+    "href": "posts/data-visualization/DataVisualization.html",
+    "title": "Data Visualization - The California Housing Market",
     "section": "",
-    "text": "I am an Industrial Engineering and Operations Analytics student at the University of Arkansas who is interested in exploring and pursuing possible job opportunities in supply chain managment. I enjoy using programs like Excel and R Studio to problem solve, and I am currently tutoring 4 different students in Algebra and Pre-Calculus."
+    "text": "For this project, our team utilized data from Zillow about the California housing market. We primarily looked at average days on the market, median sale prices over time, average listing prices, median mortgage rate, and median house prices across California.\nHow did median home sale prices change in California before, during, and after the COVID-19 pandemic?\nWhy this question is interesting: We all know that Covid had an impact on the housing market, but for those of us who were not in a place to worry about buying or selling a house for whatever reason during this time, it may be difficult to fully understand the impact that Covid had. Answering this question gives us a concrete visual of how California housing prices were affected by Covid.\nExcel Analysis:\nVisual Development:\nAssertion-Evidence Slide:\nWhich California cities have the highest average housing prices?\nWhy this question is interesting: A state as large as California has hundreds cities with varying populations and geographical characteristics. This question helps us look into how different factors affect housing prices, and allows us to compare these affects to other parts of the United States.\nExcel Analysis: To make this bar-chart, we started by creating a pivot table of the average listing prices across America. Then, state name and region name were set as the rows, and average listing price from 8/31/2026 as the value. The rows were then filtered to only show data from California. After creating the bar-chart from this filtered data, it was then refined with some axis resizing.\nVisual Development: Our team created an assertion-evidence slide that features the bar-chart that was created to answer this question, and the assertion statement in the heading.\nAssertion-Evidence Slide: \nHow are housing days on market distributed across individual property listings?\nWhy this question is interesting: Analyzing the number of days a property is on the market can provide some valuable information about the area it is in, and the people who live there.\nExcel Analysis: The data was formatted such that each column is a year and each row is a month. This allows us to turn the 9 years of data into 9 lines making it easy to see trends by month and trends over years.\nVisual Development: Our team created an assertion-evidence slide that features the times series graph that was created to answer this question, and the assertion statement in the heading.\nAssertion-Evidence Slide: \nWhat relationship exists between mortgage interest rates for single-family homes with a 20% down payment and median single-family home prices across California cities?\nWhy this question is interesting: This question showcases how expensive it is/ would be to buy a house in California, and even if you aren’t planning to move, it still provides some perspective on the cost of living in other areas, like Fayetteville, and a general idea of how mortgage price and house price might be correlated elsewhere.\nExcel Analysis: To answer this question, we uploaded the relevant data into an excel workbook, and used that data to create a dual-axis scatter plot showing how median mortgage rate and median house price relate to eachother across 26 different cities in California. Each Y-axis was then re-formatted to make the data easily readable.\nVisual Development: Our team created an assertion-evidence slide that features the scatter-plot that was created to answer this question, and the assertion statement in the heading.\nAssertion-Evidence Slide:"
   },
   {
     "objectID": "about.html",
@@ -19,6 +19,13 @@
     "title": "About",
     "section": "",
     "text": "About this blog"
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Eleanor Suttle",
+    "section": "",
+    "text": "I am an Industrial Engineering and Operations Analytics student at the University of Arkansas who is interested in exploring and pursuing possible job opportunities in supply chain managment. I enjoy using programs like Excel and R Studio to problem solve, and I am currently tutoring 4 different students in Algebra and Pre-Calculus."
   },
   {
     "objectID": "posts/post-with-code/index.html",
@@ -32,6 +39,6 @@
     "href": "projects.html",
     "title": "Projects",
     "section": "",
-    "text": "Welcome To My Blog\n\n\n\n\n\n\nTristan O’Malley\n\n\nSep 10, 2026\n\n\n\n\n\n\n\n\n\n\n\n\n\nPost With Code\n\n\n\n\n\n\nHarlow Malloc\n\n\nSep 13, 2026\n\n\n\n\n\n\nNo matching items"
+    "text": "Welcome To My Blog\n\n\n\n\n\n\nTristan O’Malley\n\n\nSep 10, 2026\n\n\n\n\n\n\n\n\n\n\n\n\n\nPost With Code\n\n\n\n\n\n\nHarlow Malloc\n\n\nSep 13, 2026\n\n\n\n\n\n\n\n\n\n\n\n\n\nData Visualization - The California Housing Market\n\n\n\n\n\n\nCaleb Duncan, Eleanor Suttle, Anthony White, Lifted David, Melany Chavez\n\n\nNov 13, 2026\n\n\n\n\n\n\nNo matching items"
   }
 ]
